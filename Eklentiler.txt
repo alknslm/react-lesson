@@ -1,0 +1,12 @@
+React için eklentiler:
+    - Simple React Snippets
+    - ES7+ React/Redux/React-Native snippets
+    - Auto Rename Tag
+
+    settings-> format on save check'i işaretlenirse Ctrl + S yapınca kodlar otomatik hizalanır
+
+
+    1.Giriş klasörüne gidip aşağıdaki adımlaarı izliyoruz
+    npm create vite@latest diyoruz terminal cmd satırında !! powershell değil
+    sonrasında adımları takip ediyoruz
+    adımların sonunda npm install / npm run dev
