@@ -1,0 +1,9 @@
+Fake api için Json Place Holder kullanabiliriz yada.
+Googleda kısa kısa açıklamalar için Grepper Answer.
+JsonServer ile fake api kullanacağız.
+
+npm install -g json server diyip kurulum yapıyoruz. (-g koymayınca version görünmedi)
+src altında db.json dosyası oluşturuyoruz
+json-server --watch .\src\db.json --port 4000 komutuyla istediğimiz portta çalıştıabiliriz.
+
+axios için npm install axios

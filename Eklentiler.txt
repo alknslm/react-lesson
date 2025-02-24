@@ -5,6 +5,8 @@ React için eklentiler:
 
     settings-> format on save check'i işaretlenirse Ctrl + S yapınca kodlar otomatik hizalanır
 
+    Chrome Eklentisi -> react developer tools 
+
 
     1.Giriş klasörüne gidip aşağıdaki adımlaarı izliyoruz
     npm create vite@latest diyoruz terminal cmd satırında !! powershell değil
