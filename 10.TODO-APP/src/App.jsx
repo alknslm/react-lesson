@@ -1,34 +1,47 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import TodoCreate from './components/TodoCreate'
+import TodoList from './components/TodoList'
+import Loading from './components/Loading';
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  //! todoları toplamak için ana componentde dizi oluşturuldu
+  const [todos, setTodos] = useState([]);
+
+  //! yeni oluşturulan todo için diziye ekleme yapıldı
+  const createTodo = (newTodo) => {
+    setTodos([...todos, newTodo]);
+    // eski todoları al, yenisini üstüne ekle
+  }
+
+  const removeTodo = (todoId) => {
+    setTodos([...todos.filter((todo) => todo.id != todoId)]); //remove ile gelen idlere eşit olmayanları al
+  }
+
+  const updateTodo = (newTodo) => {
+    const updatedTodos = todos.map((todo) => {
+      if (todo.id != newTodo.id) {
+        return todo;
+      }
+      return newTodo;
+    })
+
+    setTodos([...updatedTodos]);
+  }
+
+  console.log(todos);
 
   return (
-    <>
+    <div className='App'>
+      <div className='todo-div'>
+        <TodoCreate onCreateTodo={createTodo} /> {/* componente props olarak create methodu gönderildi*/}
+        <TodoList todos={todos} onRemoveTodo={removeTodo} onUpdateTodo={updateTodo} />
+      </div>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <Loading />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
