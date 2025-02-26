@@ -1,0 +1,24 @@
+REDUX
+Stateleri kontrol etmek için tüm projeyi saran bir yapı.
+Bütün componentlerden erişilebilir reduxtan bütün componentlere erişebilir.
+
+Kullanım için :
+npm install @reduxjs/toolkit
+npm install react-redux
+
+redux storun heryerden erişilmesi için <App> componenetinin main.jsx içinde
+Provider'a strore propsu geçerek Provider ile sarmalanması lazım.
+store.getState hatası alınırsa 
+***
+createRoot(document.getElementById('root')).render(
+  <Provider store={store}> ======> burdaki store tek parantezle gidecek
+    <App />
+  </Provider>
+)
+***
+
+1-Paketleri indir
+2-Redux Store oluştur
+3-App i store propsu içeren Provider componenti ile sar (mainjsx içinde)
+4-Redux State Slice oluştur
+5-Oluşturulan slice'ı store a ekle
