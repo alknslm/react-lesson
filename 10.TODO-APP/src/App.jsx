@@ -3,6 +3,8 @@ import './App.css'
 import TodoCreate from './components/TodoCreate'
 import TodoList from './components/TodoList'
 import Loading from './components/Loading';
+import Card from './components/Card';
+import NightMode from './components/NightMode';
 
 function App() {
 
@@ -18,6 +20,8 @@ function App() {
   const removeTodo = (todoId) => {
     setTodos([...todos.filter((todo) => todo.id != todoId)]); //remove ile gelen idlere eşit olmayanları al
   }
+
+
 
   const updateTodo = (newTodo) => {
     const updatedTodos = todos.map((todo) => {
@@ -40,6 +44,10 @@ function App() {
       </div>
       <div>
         <Loading />
+      </div>
+      <div style={{ flexDirection: 'row', display: 'flex' }}>
+        <Card />
+        <NightMode />
       </div>
     </div>
   )
