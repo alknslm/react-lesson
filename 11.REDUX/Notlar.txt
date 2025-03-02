@@ -16,9 +16,21 @@ createRoot(document.getElementById('root')).render(
   </Provider>
 )
 ***
+REDUX TOOLKİT
+Uygulamanın statelerini ve öethodlarını base bir yerde tanımlayıp tüm componentlerden erişim sağlar.
+
+
+REDUX DEVTOOLS chrome uzantısı
+***
 
 1-Paketleri indir
-2-Redux Store oluştur
-3-App i store propsu içeren Provider componenti ile sar (mainjsx içinde)
+2-Redux Store oluştur(slice'ları toparlayan bir depo gibi)
+  **ProductSlice
+  **ApplicationSlice
+3-App i store propsu içeren Provider componenti ile sar (mainjsx içinde). artık store'a tüm app'den erişebilrsin
 4-Redux State Slice oluştur
 5-Oluşturulan slice'ı store a ekle
+6- App içinde ---> const { value } = useSelector((store) => store.counter); ile store'a erişilebiliriz
+    !!!*Slice içindeki state değerine eişmek için useSelector kullanılır.
+    !!!Slice içinde methodlara erşmek için useDispatch kullanılır.
+    !!! useDispatch ve useSelector react hookları diye geçer.
