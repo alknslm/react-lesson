@@ -5,7 +5,8 @@ React için eklentiler:
 
     settings-> format on save check'i işaretlenirse Ctrl + S yapınca kodlar otomatik hizalanır
 
-    Chrome Eklentisi -> react developer tools 
+    Chrome Eklentisi    -> react developer tools
+                        ->redux devTools
 
 
     1.Giriş klasörüne gidip aşağıdaki adımlaarı izliyoruz
@@ -22,3 +23,9 @@ React için eklentiler:
 
 
     set PATH=%PATH%;C:\Users\xsalkan\Programs\NodeJS\node-v22.14.0-win-x64\;C:\Users\xsalkan\Programs\NodeJS\node-v22.14.0-win-x64\node_modules\npm\bin\npm.cmd;
+
+    indirilecek
+    npm install
+    npm install @reduxjs/toolkit
+    npm install react-redux
+    npm i react-router-dom
