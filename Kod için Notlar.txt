@@ -1,0 +1,29 @@
+REACT HOOKLARI 
+
+
+USE SELECTOR
+--------------
+const { value } = useSelector((store) => store.counter); ile store'a erişilebiliriz
+    **Slice içindeki state değerine eişmek için useSelector kullanılır.
+
+
+USE DISPATCH
+------------
+    **Slice içinde methodlara erşmek için useDispatch kullanılır.
+
+
+USEPARAMS
+---------
+URL adresine girilen değişkenleri yakalamak için kullanılır.
+Değişken oması için ":" koymak gerekiyor adrese
+    **<Route path='/product-details/:id' element={<ProductDetails />} />
+
+Değişkeni yakalarkende (ProductDetails içinde)
+    **const params = useParams();
+
+
+USENAVIGATE
+-----------
+Bir nesneye tıkladığında nerye yönlendirileceğini belirtir
+    **const navigate = useNavigate();
+    **<button onClick={() => navigate("/product-details/" + id)}> Detayına Git</button>
