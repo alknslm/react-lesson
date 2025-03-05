@@ -2,6 +2,8 @@ import React from 'react'
 import '../css/Header.css'
 import { CiShoppingBasket } from "react-icons/ci";
 import ModeSwitch from './ModeSwitch';
+import SearchInput from './SearchInput';
+import Basket from './Basket';
 import { useState } from 'react';
 
 function Header() {
@@ -15,9 +17,11 @@ function Header() {
             </div>
 
             <div className='flex-row'>
-                <input className='search-input' placeholder='Search something..' type="text" />
+                {/* <input className='search-input' placeholder='Search something..' type="text" /> */}
+                <SearchInput />
                 <div className='flex-row'>
-                    <CiShoppingBasket className='icon' />
+                    {/* <CiShoppingBasket className='icon' /> */}
+                    <Basket />
                     <ModeSwitch />
                 </div>
             </div>
