@@ -1,5 +1,5 @@
 import React from 'react'
-import '../css/ModeSwitch.css'
+import '../../css/ModeSwitch.css'
 import { useState } from 'react';
 
 function ModeSwitch() {

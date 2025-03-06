@@ -1,10 +1,9 @@
 import React from 'react'
 import '../css/Header.css'
 import { CiShoppingBasket } from "react-icons/ci";
-import ModeSwitch from './ModeSwitch';
-import SearchInput from './SearchInput';
-import Basket from './Basket';
-import { useState } from 'react';
+import ModeSwitch from './UI/ModeSwitch';
+import SearchInput from './UI/SearchInput';
+import Basket from './UI/Basket';
 
 function Header() {
     return (

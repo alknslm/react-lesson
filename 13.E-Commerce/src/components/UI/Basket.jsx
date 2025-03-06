@@ -1,5 +1,6 @@
 import React from 'react'
-import '../css/Basket.css'
+import '../../css/Basket.css'
+
 function Basket() {
     return (
         <div>
