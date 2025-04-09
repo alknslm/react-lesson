@@ -4,14 +4,24 @@ import { CiShoppingBasket } from "react-icons/ci";
 import ModeSwitch from './UI/ModeSwitch';
 import SearchInput from './UI/SearchInput';
 import Basket from './UI/Basket';
+import { useNavigate } from 'react-router-dom';
+import Badge from '@mui/material/Badge';
+import { useDispatch, useSelector } from 'react-redux';
+import { setDrawer } from '../redux/slices/basketSlice';
 
 function Header() {
+
+    const navigate = useNavigate();
+
+    const { products } = useSelector((store) => store.basket);
+    const dispatch = useDispatch()
+
     return (
         <div style={{
             display: 'flex', flexDirection: 'row',
             alignItems: 'center', justifyContent: 'space-between'
         }}>
-            <div className='flex-row'>
+            <div className='flex-row' onClick={() => navigate("/")} style={{ cursor: 'pointer' }}>
                 <img className='logo' src="./src/images/logo.png" alt="" />
             </div>
 
@@ -20,7 +30,10 @@ function Header() {
                 <SearchInput />
                 <div className='flex-row'>
                     {/* <CiShoppingBasket className='icon' /> */}
-                    <Basket />
+                    <Badge onClick={() => dispatch(setDrawer())} badgeContent={products.length} color="error">
+                        <Basket />
+                    </Badge>
+
                     <ModeSwitch />
                 </div>
             </div>
