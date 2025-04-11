@@ -46,11 +46,17 @@ export const basketSlice = createSlice({
             state.products && state.products.map((product) => {
                 state.totalAmount += product.price * product.count;
             })
+        },
+
+        deleteFromBasket: (state, action) => {
+            const extractedProducts = state.products.filter((product) => product.id !== action.payload.id);
+            state.products = extractedProducts;
+            writeFromBasketToStorage(state.products);
         }
 
     }
 })
 
-export const { addToBasket, setDrawer, calculateBasket } = basketSlice.actions
+export const { addToBasket, setDrawer, calculateBasket, deleteFromBasket } = basketSlice.actions
 
 export default basketSlice.reducer
